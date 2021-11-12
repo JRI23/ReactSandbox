@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, BrowserRouter as Router, Switch, Link} from "react-router-dom";
+import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import Home from "./containers/Home/Home";
 import CommentPage from "./containers/CommentPage/CommentPage";
 import Seasons from "./containers/Seasons/Seasons";
+import Navbar from "./components/Navbar";
 
 
 
@@ -11,20 +12,7 @@ const App = () => {
     return (
         <Router>
 
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/commentpage">Comment Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/seasons">Seasons</Link>
-                    </li>
-                </ul>
-            </nav>
-
+            <Navbar />
 
             <Switch>
                 <Route path="/commentpage" component={CommentPage}/>
