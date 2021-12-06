@@ -3,7 +3,7 @@ import SeasonDisplay from '../../components/SeasonDisplay';
 import Spinner from '../../components/Spinner';
 
 export default class Seasons extends React.Component {
-    state = { lat: null, errorMessage: ''};
+    state = {lat: null, errorMessage: ''};
 
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
@@ -15,10 +15,7 @@ export default class Seasons extends React.Component {
         );
     }
 
-
-
-    // React says we have to define render!!
-    render() {
+    renderContent() {
         // if there is an error message and no latitude show the following!
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>
@@ -26,9 +23,18 @@ export default class Seasons extends React.Component {
 
         // if there is no error message and a latitude show the following!
         if (!this.state.errorMessage && this.state.lat) {
-            return <SeasonDisplay lat={this.state.lat} />
+            return <SeasonDisplay lat={this.state.lat}/>
         }
 
-        return <Spinner />;
+        return <Spinner message="Please accept location request"/>;
     }
-}
+
+    // React says we have to define render!!
+    render() {
+        return (
+            <div className="border-red">
+                {this.renderContent()}
+            </div>
+        )
+    }
+};
