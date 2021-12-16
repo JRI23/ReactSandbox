@@ -15,6 +15,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/seasons">Seasons</Link>
                     </li>
+                    <li>
+                        <Link to="/pics">Pics</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
