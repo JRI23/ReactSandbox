@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import "./assets/index.css";
 import Home from "./containers/Home/Home";
 import CommentPage from "./containers/CommentPage/CommentPage";
 import Seasons from "./containers/Seasons/Seasons";
@@ -15,17 +16,17 @@ class App extends React.Component {
         return (
             <Router>
 
-                <Navbar/>
+                <Navbar />
 
                 <Switch>
-                    <Route path="/commentpage" component={CommentPage}/>
-                    <Route path="/seasons" component={Seasons}/>
-                    <Route path="/pics" component={Pics}/>
-                    <Route path="/" component={Home}/>
+                    <Route path="/commentpage" component={CommentPage} />
+                    <Route path="/seasons" component={Seasons} />
+                    <Route path="/pics" component={Pics} />
+                    <Route path="/" component={Home} />
                 </Switch>
             </Router>
         );
     }
 }
 
-ReactDOM.render(<App/>, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))

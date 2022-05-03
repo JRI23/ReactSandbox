@@ -1,25 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/commentpage">Comment Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/seasons">Seasons</Link>
-                    </li>
-                    <li>
-                        <Link to="/pics">Pics</Link>
-                    </li>
-                </ul>
-            </nav>
+        <div className="ui secondary menu">
+            <NavLink exact={true} activeClassName="active" className="item" to="/">Home</NavLink>
+            <NavLink activeClassName="active" className="item" to="/commentpage">Comment Page</NavLink>
+            <NavLink activeClassName="active" className="item" to="/seasons">Seasons</NavLink>
+            <NavLink activeClassName="active" className="item" to="/pics">Pics</NavLink>
         </div>
     );
 };
