@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./assets/index.css";
-import Home from "./containers/Home/Home";
+import HomePage from "./containers/HomePage/HomePage";
 import CommentPage from "./containers/CommentPage/CommentPage";
-import Seasons from "./containers/Seasons/Seasons";
-import Pics from "./containers/Pics/Pics";
+import SeasonsPage from "./containers/SeasonsPage/SeasonsPage";
+import PicsPage from "./containers/PicsPage/PicsPage";
+import VideosPage from './containers/VideosPage/VideosPage';
 import Navbar from "./components/Navbar";
 
 
@@ -19,10 +20,11 @@ class App extends React.Component {
                 <Navbar />
 
                 <Switch>
-                    <Route path="/commentpage" component={CommentPage} />
-                    <Route path="/seasons" component={Seasons} />
-                    <Route path="/pics" component={Pics} />
-                    <Route path="/" component={Home} />
+                    <Route path="/comments" component={CommentPage} />
+                    <Route path="/seasons" component={SeasonsPage} />
+                    <Route path="/pics" component={PicsPage} />
+                    <Route path="/videos" component={VideosPage} />
+                    <Route path="/" component={HomePage} />
                 </Switch>
             </Router>
         );

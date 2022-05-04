@@ -1,7 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-    state = {term: ''};
+    state = { term: '' };
 
     onFormSubmit = event => {
         event.preventDefault();
@@ -14,9 +14,9 @@ class SearchBar extends React.Component {
             <div className="ui-segment">
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
-                        <label>Image Search</label>
+                        <label>{this.props.label}</label>
                         <input type="text" value={this.state.term}
-                               onChange={e => this.setState({term: e.target.value})}/>
+                            onChange={e => this.setState({ term: e.target.value })} />
                     </div>
                 </form>
             </div>
