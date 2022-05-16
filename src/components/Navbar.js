@@ -5,6 +5,7 @@ const Navbar = () => {
     return (
         <div className="ui secondary menu">
             <NavLink exact={true} activeClassName="active" className="item" to="/">Home</NavLink>
+            <NavLink activeClassName="active" className="item" to="/accordion">Accordion Page</NavLink>
             <NavLink activeClassName="active" className="item" to="/comments">Comment Page</NavLink>
             <NavLink activeClassName="active" className="item" to="/seasons">Seasons</NavLink>
             <NavLink activeClassName="active" className="item" to="/pics">Pics</NavLink>
