@@ -7,6 +7,7 @@ import CommentPage from "./containers/CommentPage/CommentPage";
 import AccordionPage from './containers/AccordionPage/AccordionPage';
 import SeasonsPage from "./containers/SeasonsPage/SeasonsPage";
 import PicsPage from "./containers/PicsPage/PicsPage";
+import TranslatePage from './containers/TranslatePage/TranslatePage';
 import VideosPage from './containers/VideosPage/VideosPage';
 import Navbar from "./components/Navbar";
 
@@ -23,6 +24,7 @@ class App extends React.Component {
                 <Switch>
                     <Route path="/comments" component={CommentPage} />
                     <Route path="/accordion" component={AccordionPage} />
+                    <Route path="/translate" component={TranslatePage} />
                     <Route path="/seasons" component={SeasonsPage} />
                     <Route path="/pics" component={PicsPage} />
                     <Route path="/videos" component={VideosPage} />

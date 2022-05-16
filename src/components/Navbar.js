@@ -10,6 +10,7 @@ const Navbar = () => {
             <NavLink activeClassName="active" className="item" to="/seasons">Seasons</NavLink>
             <NavLink activeClassName="active" className="item" to="/pics">Pics</NavLink>
             <NavLink activeClassName="active" className="item" to="/videos">Videos</NavLink>
+            <NavLink activeClassName="active" className="item" to="/translate">Translate</NavLink>
         </div>
     );
 };
